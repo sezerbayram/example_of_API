@@ -17,26 +17,24 @@ fetch('https://jsonplaceholder.typicode.com/users/')
           // console.log(item[index]);
              
      })
-
-     fetch('https://jsonplaceholder.typicode.com/todos/1')
-  .then(response => response.json())
-  .then(item => {
+  
+      fetch('https://jsonplaceholder.typicode.com/todos/1')
+         .then(response => response.json())
+         .then(item => {
 
        document.querySelector(".toDO");
-      const myUl = document.createElement("ul");
+       const myUl = document.createElement("ul");
 
 
-      for(let index = 0; index < item.length; index++) {
-        const myLi = document.createElement("li");
-         myUl.appendChild(myLi);
+     for(let index = 0; index < item.length; index++) {
+      const myLi = document.createElement("li");
+          myUl.appendChild(myLi);
       const myA = document.createElement("a");
-      myLi.appendChild(myA);
-      myA.innerHTML = item[index].userId + "/" + item[index].id + "/" + item[index].title;
+       myLi.appendChild(myA);
+       myA.innerText = item[index].userId + "/" + item[index].id + "/" + item[index].title;
      
       
-           }
+            }
          
-           //console.log(item[index]);
-   })
-
-
+            //console.log(item[index]);
+    })
